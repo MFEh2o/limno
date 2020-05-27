@@ -43,7 +43,7 @@ calcZMixMFE <- function(d,thresh=0.1) {
       
       #Otherwise, determine the shallowest depth at which dDdZ exceeds threshold density difference
       whichMin <- min(which(dDdZ>thresh))
-      zMix <- mean(interpProfile$x[whichMin],interpProfile$x[(whichMin+1)])
+      zMix <- mean(c(interpProfile$x[whichMin],interpProfile$x[(whichMin+1)]))
     }
       
   }
